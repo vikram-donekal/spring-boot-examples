@@ -4,22 +4,24 @@ SPRING-OAuth 2.0:
 Java - Spring Boot applications: RestFull application (CRUD) on student DTO with  using OAuth2.0.
 
 
-Language : java 8
-Framework : Spring Framework.
-Build Tool : Maven
-Container : Docker
-container orchestrator : Kubernetes
-Docker Image (Docker hub ): vikramdonekal/spring-OAuth-client
+	Language : java 8
+	Framework : Spring Framework.
+	Build Tool : Maven
+	Container : Docker
+	container orchestrator : Kubernetes
+	Docker Image (Docker hub ): vikramdonekal/spring-OAuth-client
 
 
 Running the application:
 
 1: Normal Java-spring boot Application: 
-						command : mvn clean compile install spring-boot:run
+
+	command : mvn clean compile install spring-boot:run
 	It will run Tomcat server with PORT : 9202
 
 
 2: Docker Image:
+
 	Prerequisite : Docker Should be up and Running.
 	
 	docker run -d -p 9202:9202 vikramdonekal/spring-OAuth-client
@@ -27,6 +29,7 @@ Running the application:
 	
                                         
 3: Kubernetes :
+
 	Prerequisite : Kubernetes Should be up and Running.
 	
 	Clone or download my K8s Yaml Files:
@@ -45,15 +48,15 @@ Running the application:
 
 Generating Access Token:
 
-After Running or Deploying Application. Hit End point of /login
+	After Running or Deploying Application. Hit End point of /login
 
-Generate Authorization  Header using Basic Auth and enter User Id and user Password.
+	Generate Authorization  Header using Basic Auth and enter User Id and user Password.
 
 
-Sample Request:
-  curl -H 'Authorization: Basic YWRtaW46YWRtaW4=' -H "Content-type: application/json" 'http://localhost:9202/login'
+	Sample Request:
+	  curl -H 'Authorization: Basic YWRtaW46YWRtaW4=' -H "Content-type: application/json" 'http://localhost:9202/login'
 
-Sample Response:
+	Sample Response:
    
    
    
