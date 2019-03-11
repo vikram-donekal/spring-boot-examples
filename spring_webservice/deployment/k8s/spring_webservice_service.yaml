@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  name: spring-restful-webservice
+spec: 
+  type: NodePort
+  ports: 
+    - 
+      port: 9200
+      targetPort: 9200
+  selector: 
+    app: spring-restful-webservice

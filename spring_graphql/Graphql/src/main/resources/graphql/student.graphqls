@@ -1,0 +1,28 @@
+type StudentDto {
+    id: Long!
+    firstName: String!
+    secondName: String!
+
+}
+
+type Query {
+    
+    getStudentById(id: Long!): StudentDto!
+    
+    getTotalCountOfStudents: Long!   
+     
+    getStudentByFirstOrLastName(name: String!): [StudentDto]!
+
+    
+}
+
+type Mutation {
+
+    insertStudent(firstName: String!, secondName: String!): [StudentDto]!
+    
+    updateStudent(id: Long!,firstName: String!, secondName: String!): StudentDto!
+    
+    deleteAllStudents: String!
+    deleteStudentById(id: Long!): [StudentDto]!
+    
+}

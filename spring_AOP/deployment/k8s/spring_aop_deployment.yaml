@@ -1,0 +1,25 @@
+---
+kind: Deployment
+
+spec:
+
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - name: spring-aop
+        image: vikramdonekal/spring-aop
+        ports:
+        - containerPort: 9201
+    metadata:
+      labels:
+        app: spring-aop
+  selector:
+    matchLabels:
+      app: spring-aop
+apiVersion: apps/v1
+metadata:
+  labels:
+    app: spring-aop
+  name: spring-aop
+
