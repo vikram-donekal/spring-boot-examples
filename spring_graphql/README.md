@@ -1,17 +1,19 @@
 
 SPRING-GraphQL:
 
-Java - Spring Boot applications: RestFull application (CRUD) on student DTO with  using GraphQL.
+	Java - Spring Boot applications: RestFull application (CRUD) on student DTO with  using GraphQL.
 
-Language : java 8
-Framework : Spring Framework.
-Build Tool : Maven
-Container : Docker
-container orchestrator : Kubernetes
-package manager : Helm (Inside Kubernetes)
-API Documentation : Swagger 2
+	Language : java 8
+	Framework : Spring Framework.
+	Build Tool : Maven
+	Container : Docker
+	container orchestrator : Kubernetes
+	package manager : Helm (Inside Kubernetes)
+	API Documentation : Swagger 2
 
-Docker Image (Docker hub ): vikramdonekal/spring-graphql
+Docker Image (Docker hub ): 
+	
+	vikramdonekal/spring-graphql
 
 GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data.
    
@@ -27,15 +29,15 @@ Here I have integrated SpringBoot with GraphQL  and written a simple  API Calls
 
 Application UseCase:
    
-   CRUD Operation on StudentDto: (id, firstName,secondName)
-    
-   Queries and mutations: GraphQL has single entry point:
-		 getAllStudents
-		 getStudentById
-		 updateStudent
-		 insertStudent
-		 deleteStudentById
-		 deleteAllStudent
+	   CRUD Operation on StudentDto: (id, firstName,secondName)
+
+	   Queries and mutations: GraphQL has single entry point:
+			 getAllStudents
+			 getStudentById
+			 updateStudent
+			 insertStudent
+			 deleteStudentById
+			 deleteAllStudent
 		
 		
 	GraphQL schema : http://localhost:9206/graphql/schema.json
@@ -43,13 +45,14 @@ Application UseCase:
 
 Running the application:
 
-1: Normal Java-spring boot Application: 
-						command : mvn clean compile install spring-boot:run
-	It will run Tomcat server with PORT : 9206
-	U can Hit any Api  directly
-	example: http://localhost:9206/graphql?query={getAllStudents}
+	1: Normal Java-spring boot Application: 
+							command : mvn clean compile install spring-boot:run
+		It will run Tomcat server with PORT : 9206
+		U can Hit any Api  directly
+		example: http://localhost:9206/graphql?query={getAllStudents}
 
 2: Docker Image:
+
 	Prerequisite : Docker Should be up and Running.
 	
 	docker run -d -p 9206:9206 vikramdonekal/spring-graphql
@@ -57,6 +60,7 @@ Running the application:
 	
                                         
 3: Kubernetes :
+
 	Prerequisite : Kubernetes Should be up and Running.
 	
 	Clone or download my K8s Yaml Files:
